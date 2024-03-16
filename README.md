@@ -12,6 +12,7 @@ Integration Tests written for super-market-app APIs using Rest Assured.
 Maven console output, post-execution, is uploaded in the same project at the path - "/super-market-tests/src/main/resources/consoleOutput/TestExecutionMavenOutput.txt"
 
 ## Future Enhancements:
+- Generation of HTML report - can use ExtentReport for the same.
 - Reading JSON string from a file.
 - Update Assertions. For example, after creating an order, check if business requirements are handled correctly.
 - If a database is used, perform DB queries for data validations.
