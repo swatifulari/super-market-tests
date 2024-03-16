@@ -4,7 +4,7 @@ Integration Tests written for super-market-app APIs using Rest Assured.
 
 ## Execution Steps:
 - Before starting with execution, boot the Spring Boot App - [super-market-app](https://github.com/swatifulari/super-market-app)
-- Run the following command:
+- Run the following command: mvn test
 
 
 
@@ -22,3 +22,4 @@ Maven console output, post-execution, is uploaded in the same project at the pat
   - For API, we can include Request Validation (tests which will test how invalid user input is handled by app).
   - Functional Validation - Includes testing business flows for both success and error (backend) scenarios.
   - Authentication and Authorization - If any policy is applied then test success/error scenarios around them.
+- Tag tests for sanity, regression, etc. - in Junit we can create Groups. TestNG - Create TestNg XMl files with required tests. Use BDD/Cucumber and Cucumber Tags can be used
