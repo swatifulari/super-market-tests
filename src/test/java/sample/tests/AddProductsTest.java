@@ -37,17 +37,17 @@ public class AddProductsTest {
 		String productName = RandomStringUtils.randomAlphabetic(2);
 		double price = RandomValueGenerator.randomDoubleValue();
 		String jsonString = "[{" + "\"productName\": " + "\"" + productName + "\"," + "\"price\":" + price + "}]";
-		
-		//Call POST to create a new Product
+
+		// Call POST to create a new Product
 		RestAssured.given().body(jsonString).contentType(ContentType.JSON).log().all().when()
 				.post("http://localhost:8080/products").then().log().all().statusCode(201);
 
-		//Call GET to validate the new Product is added
+		// Call GET to validate the new Product is added
 		Response response = RestAssured.given().log().all().when().get("http://localhost:8080/products").then().log()
 				.all().statusCode(200).extract().response();
 
 		JsonPath jsonPath = JsonPath.from(response.asString());
 		assertThat(jsonPath.getList("productName"), hasItem(productName));
 	}
-	
+
 }

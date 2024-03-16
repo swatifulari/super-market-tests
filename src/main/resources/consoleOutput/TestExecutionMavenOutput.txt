@@ -1,0 +1,330 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------< [0;36msuper-market-tests:super-market-tests[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding super-market-tests 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m]   from pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclean:3.2.0:clean[m [1m(default-clean)[m @ [36msuper-market-tests[0;1m ---[m
+[[1;34mINFO[m] Deleting C:\Users\patil\eclipse-workspace\super-market-tests\target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:resources[m [1m(default-resources)[m @ [36msuper-market-tests[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 1 resource from src\main\resources to target\classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.11.0:compile[m [1m(default-compile)[m @ [36msuper-market-tests[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:testResources[m [1m(default-testResources)[m @ [36msuper-market-tests[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 0 resource from src\test\resources to target\test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.11.0:testCompile[m [1m(default-testCompile)[m @ [36msuper-market-tests[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module! :source
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 4 source files with javac [debug target 1.8] to target\test-classes
+[[1;33mWARNING[m] bootstrap class path not set in conjunction with -source 8
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32msurefire:3.2.2:test[m [1m(default-test)[m @ [36msuper-market-tests[0;1m ---[m
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running sample.tests.[1mAddProductsTest[m
+Request method:	POST
+Request URI:	http://localhost:8080/products
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+[
+    {
+        "productName": "D",
+        "price": 25.0
+    }
+]
+HTTP/1.1 400 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 22
+Date: Sat, 16 Mar 2024 11:30:44 GMT
+Connection: close
+
+Product Already Exists
+Request method:	POST
+Request URI:	http://localhost:8080/products
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+[
+    {
+        "productName": "zl",
+        "price": 80.05
+    }
+]
+HTTP/1.1 201 
+Content-Length: 0
+Date: Sat, 16 Mar 2024 11:30:44 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	GET
+Request URI:	http://localhost:8080/products
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 16 Mar 2024 11:30:44 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+[
+    {
+        "productName": "A",
+        "price": 40.0,
+        "totalNumberOfItems": 0,
+        "promoCount": 3,
+        "promoPrice": 70.0
+    },
+    {
+        "productName": "B",
+        "price": 10.0,
+        "totalNumberOfItems": 0,
+        "promoCount": 2,
+        "promoPrice": 15.0
+    },
+    {
+        "productName": "C",
+        "price": 30.0,
+        "totalNumberOfItems": 0,
+        "promoCount": 0,
+        "promoPrice": 0.0
+    },
+    {
+        "productName": "D",
+        "price": 25.0,
+        "totalNumberOfItems": 0,
+        "promoCount": 0,
+        "promoPrice": 0.0
+    },
+    {
+        "productName": "zl",
+        "price": 80.05,
+        "totalNumberOfItems": 0,
+        "promoCount": 0,
+        "promoPrice": 0.0
+    }
+]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.875 s -- in sample.tests.[1mAddProductsTest[m
+[[1;34mINFO[m] Running sample.tests.[1mCreateOrderTest[m
+Request method:	POST
+Request URI:	http://localhost:8080/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "cartItems": [
+        {
+            "productName": "Z",
+            "price": 40.0,
+            "totalNumberOfItems": 5
+        }
+    ]
+}
+HTTP/1.1 400 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 16 Mar 2024 11:30:46 GMT
+Connection: close
+
+{
+    "message": "Product  is not available in market. Choose Valid Product"
+}
+Request method:	POST
+Request URI:	http://localhost:8080/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "cartItems": [
+        {
+            "productName": "A",
+            "price": 40.0,
+            "totalNumberOfItems": 5
+        },
+        {
+            "productName": "B",
+            "price": 10.0,
+            "totalNumberOfItems": 5
+        }
+    ]
+}
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 16 Mar 2024 11:30:46 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "cartItems": [
+        {
+            "productName": "A",
+            "price": 40.0,
+            "totalNumberOfItems": 5,
+            "promoCount": 0,
+            "promoPrice": 0.0
+        },
+        {
+            "productName": "B",
+            "price": 10.0,
+            "totalNumberOfItems": 5,
+            "promoCount": 0,
+            "promoPrice": 0.0
+        }
+    ],
+    "cartTotal": 190.0
+}
+Request method:	POST
+Request URI:	http://localhost:8080/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "cartItems": [
+        {
+            "productName": "A",
+            "price": 40.0,
+            "totalNumberOfItems": 5
+        }
+    ]
+}
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 16 Mar 2024 11:30:46 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "cartItems": [
+        {
+            "productName": "A",
+            "price": 40.0,
+            "totalNumberOfItems": 5,
+            "promoCount": 0,
+            "promoPrice": 0.0
+        }
+    ],
+    "cartTotal": 150.0
+}
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.201 s -- in sample.tests.[1mCreateOrderTest[m
+[[1;34mINFO[m] Running sample.tests.[1mGetProductsTest[m
+Request method:	GET
+Request URI:	http://localhost:8080/products
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 16 Mar 2024 11:30:46 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+[
+    {
+        "productName": "A",
+        "price": 40.0,
+        "totalNumberOfItems": 0,
+        "promoCount": 3,
+        "promoPrice": 70.0
+    },
+    {
+        "productName": "B",
+        "price": 10.0,
+        "totalNumberOfItems": 0,
+        "promoCount": 2,
+        "promoPrice": 15.0
+    },
+    {
+        "productName": "C",
+        "price": 30.0,
+        "totalNumberOfItems": 0,
+        "promoCount": 0,
+        "promoPrice": 0.0
+    },
+    {
+        "productName": "D",
+        "price": 25.0,
+        "totalNumberOfItems": 0,
+        "promoCount": 0,
+        "promoPrice": 0.0
+    },
+    {
+        "productName": "zl",
+        "price": 80.05,
+        "totalNumberOfItems": 0,
+        "promoCount": 0,
+        "promoPrice": 0.0
+    }
+]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in sample.tests.[1mGetProductsTest[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1;32mTests run: 6, Failures: 0, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  13.159 s
+[[1;34mINFO[m] Finished at: 2024-03-16T17:00:47+05:30
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
